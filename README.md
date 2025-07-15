@@ -27,7 +27,8 @@ HTML 요소의 위치 지정 방식을 설정하는 속성입니다.
 | `sticky`   | "원래 있던 곳 → 고정!"    | 스크롤 조건 만족 시 부모 기준         |
 
 - 음수값도 적용
-
+- absoulte : 부모가 없다면 뷰포트가 기준
+- 주의사항 z-index는 최소 relative 해주기 (position이 설정이 안되어있는 요소의 스타일엔 z-index 는 설정할 수 없다.)
 
 
 
@@ -39,3 +40,41 @@ box-sizing: border-box;의미
 | ------------------- | ----------------------------------------- | --------------------------- |
 | `content-box` (기본값) | `width`와 `height`는 **콘텐츠만**               | padding과 border는 크기 밖으로 더해짐 |
 | `border-box`        | `width`와 `height`에 **padding과 border 포함** | box의 실제 크기를 유지하기 쉬움         |
+
+
+
+---
+
+
+# 250715
+# Layout(중요) !!!
+
+
+### 1. Flexbox란?
+1차원 레이아웃 구성 (가로 or 세로 한 방향)
+주로 정렬과 공간 분배에 강점
+부모 요소에 display: flex 지정하여 사용
+
+
+### 주요 속성 (부모 - Flex Container 기준)
+| 속성                | 설명          | 예시                                      |
+| ----------------- | ----------- | --------------------------------------- |
+| `display: flex`   | Flexbox 활성화 | `display: flex;`                        |
+| `flex-direction`  | 주축 방향 설정    | `row` (가로), `column` (세로)               |
+| `justify-content` | 주축 방향 정렬    | `flex-start`, `center`, `space-between` |
+| `align-items`     | 교차축 방향 정렬   | `stretch`, `center`, `flex-end`         |
+| `flex-wrap`       | 줄바꿈 여부      | `nowrap` (기본), `wrap`                   |
+
+
+### 주요 속성 (자식 - Flex Item 기준)
+| 속성           | 설명                     | 예시 (간단 설명)                       |
+| ------------ | ---------------------- | -------------------------------- |
+| `flex`       | grow, shrink, basis 설정 | `flex: 1`, `flex: 0 1 auto` 등    |
+| `order`      | 순서 변경                  | `order: 2` → 요소 순서 바뀜            |
+| `align-self` | 개별 아이템 정렬              | `auto`, `flex-start`, `center` 등 |
+
+
+
+
+
+
