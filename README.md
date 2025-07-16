@@ -74,7 +74,56 @@ box-sizing: border-box;의미
 | `align-self` | 개별 아이템 정렬              | `auto`, `flex-start`, `center` 등 |
 
 
+# 250716
+### 2. Grid란?
+2차원 레이아웃 구성 (행 + 열)
+정형적인 레이아웃, 대시보드 등에 적합
+부모 요소에 display: grid 지정하여 사용
+
+### 🧩 주요 속성 (부모 - Grid Container 기준)
+
+CSS Grid를 사용할 때 자주 사용하는 속성들을 간단하게 정리한 표입니다.
+
+| 속성                    | 설명                  | 예시                            |
+|-------------------------|-----------------------|----------------------------------|
+| `display: grid`         | Grid 시스템 활성화     | `display: grid;`                 |
+| `grid-template-columns` | 열(컬럼) 정의          | `repeat(3, 1fr)`                 |
+| `grid-template-rows`    | 행(로우) 정의          | `100px 200px`                    |
+| `gap`                   | 행/열 간격             | `gap: 10px;`                     |
+| `justify-items`         | 셀 내부 가로 정렬      | `start`, `center`, `end`        |
+| `align-items`           | 셀 내부 세로 정렬      | `start`, `center`, `end`        |
+
+---
+
+### ✅ 예시 설명
+
+- `repeat(3, 1fr)` : 동일한 너비의 열 3개를 생성
+- `100px 200px` : 첫 번째 행은 100px, 두 번째 행은 200px
+- `gap: 10px;` : 각 셀 사이에 10px 간격 부여
+- `justify-items`, `align-items` : 각각 셀의 가로/세로 정렬 방식
+
+---
+
+### 📚 참고 자료
+- [MDN Web Docs - CSS Grid](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Grid_Layout)
+- [CSS Tricks - A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 
 
 
+
+
+===========
+깃
+온리 머지
+
+일반 병합하기
+패스트 포드 가능해도 새커밋 버튼 뉴르기
+
+> 이렇게 되면 바뀐 시점으로 다시 병합해야 함
+펑션1에서 다시 뎁2 병합 (이땨는 새커밋 필용없음)
+
+리베이스 머지
+
+
+깃플로우
 
